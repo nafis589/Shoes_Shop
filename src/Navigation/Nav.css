@@ -7,6 +7,13 @@ nav {
   z-index: 999;
   margin-left: 2rem;
 }
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 input {
   padding: 12px 20px;
   border: none;
@@ -17,9 +24,50 @@ input {
   position: relative;
   width: 14rem;
 }
+
 .nav-icons {
   width: 1.5rem;
   height: 1.5rem;
   margin-left: 2rem;
   color: #494949;
+}
+
+.profile-container-mobile {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-btn {
+    display: block;
+    align-self: flex-start;
+    margin-left: -50px;
+  }
+
+  .profile-container {
+    display: none;
+  }
+
+  .profile-container-mobile {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .nav-icons {
+    margin-left: 0;
+  }
+
+  input {
+    margin-right: 0;
+  }
 }

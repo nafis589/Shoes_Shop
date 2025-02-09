@@ -7,6 +7,10 @@ import data from "./db/data";
 import Card from "./components/Card";
 
 function App() {
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+  const toggleSidebar = () => {
+    setIsSidebarVisible(!isSidebarVisible);
+  };
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const [query, setQuery] = useState("");
@@ -56,8 +60,16 @@ function App() {
   const result = filteredData(data, selectedCategory, query);
   return (
     <>
-      <Sidebar handleChange={handleChange} />
-      <Navigation query={query} handleInputChange={handleInputChange} />
+      <Sidebar
+        handleChange={handleChange}
+        isVisible={isSidebarVisible}
+        setIsSidebarVisible={setIsSidebarVisible}
+      />
+      <Navigation
+        query={query}
+        handleInputChange={handleInputChange}
+        toggleSidebar={toggleSidebar}
+      />
       <Recommended handleClick={handleClick} />
       <Products result={result} />
     </>
