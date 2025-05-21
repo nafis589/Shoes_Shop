@@ -22,6 +22,17 @@ A modern and responsive e-commerce platform built with React, featuring dynamic 
 - 🛒 Intuitive shopping interface
 - 🎯 Product recommendations
 
+## 🚀 Demo
+
+<div align="center">
+
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Site-brightgreen?style=for-the-badge&logo=vercel)]()
+
+<img src="public/image.png" alt="SkyWings Demo" width="600" />
+
+</div>
+
+
 ## 🛠️ Tech Stack
 
 - **Frontend Framework:** React.js
